@@ -1,0 +1,64 @@
+plugins {
+    id 'application'
+    id 'java'
+    id 'org.springframework.boot' version '3.2.2'
+    id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+}
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    lombokVersion = "1.18.30"
+    jjwtVersion = "0.12.5"
+}
+
+dependencies {
+    // Core Spring Boot dependencies
+    implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-oauth2-resource-server'
+
+    // Spring Cloud Config (Optional)
+    implementation 'org.springframework.cloud:spring-cloud-starter-bootstrap:4.1.1'
+
+    // JWT for authentication
+    implementation "io.jsonwebtoken:jjwt-api:$jjwtVersion"
+    implementation "io.jsonwebtoken:jjwt-impl:$jjwtVersion"
+    implementation "io.jsonwebtoken:jjwt-jackson:$jjwtVersion"
+
+    // Lombok
+    implementation "org.projectlombok:lombok:$lombokVersion"
+    compileOnly "org.projectlombok:lombok:$lombokVersion"
+    annotationProcessor "org.projectlombok:lombok:$lombokVersion"
+    testAnnotationProcessor "org.projectlombok:lombok:$lombokVersion"
+    testImplementation "org.projectlombok:lombok:$lombokVersion"
+
+    // Utilities
+    implementation libs.guava
+    implementation 'org.modelmapper:modelmapper:3.2.0'
+
+    // MySQL connector
+    implementation 'mysql:mysql-connector-java:8.0.33'
+
+    // Testing
+    testImplementation libs.junit
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+application {
+    // Update this to your actual main class
+    mainClass = 'com.example.AuthServiceApplication'
+}
