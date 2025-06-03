@@ -26,6 +26,9 @@ dependencies {
     // Spring Cloud Config (Optional)
     implementation 'org.springframework.cloud:spring-cloud-starter-bootstrap:4.1.1'
 
+    // Kafka
+    implementation 'org.springframework.kafka:spring-kafka'
+
     // JWT for authentication
     implementation "io.jsonwebtoken:jjwt-api:$jjwtVersion"
     implementation "io.jsonwebtoken:jjwt-impl:$jjwtVersion"
