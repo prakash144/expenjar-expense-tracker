@@ -1,0 +1,43 @@
+# === Global Ignores ===
+.DS_Store
+.idea/
+*.iml
+*.log
+*.class
+
+# === OS Specific ===
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# === Maven / Gradle ===
+target/
+build/
+.gradle/
+out/
+
+# === IntelliJ / Eclipse ===
+*.iws
+*.ipr
+*.bak
+*.swp
+*.tmp
+*.orig
+
+# === VSCode ===
+.vscode/
+
+# === Logs ===
+logs/
+*.log
+*.gz
+
+# === AuthService specific ===
+AuthService/target/
+AuthService/.idea/
+AuthService/.DS_Store
+
+# === UserService specific ===
+UserService/target/
+UserService/.idea/
+UserService/.DS_Store

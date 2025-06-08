@@ -1,5 +1,6 @@
 package org.example.eventProducer;
 
+import lombok.extern.slf4j.Slf4j;
 import org.example.model.UserInfoDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -10,7 +11,8 @@ import org.springframework.messaging.support.MessageBuilder;
 import org.springframework.stereotype.Service;
 
 @Service
-public class UserInfoProducer {
+public class UserInfoProducer
+{
 
     private final KafkaTemplate<String, UserInfoDto> kafkaTemplate;
 
@@ -18,13 +20,15 @@ public class UserInfoProducer {
     private String topicJsonName;
 
     @Autowired
-    public UserInfoProducer(KafkaTemplate<String, UserInfoDto> kafkaTemplate) {
+    UserInfoProducer(KafkaTemplate<String, UserInfoDto> kafkaTemplate){
         this.kafkaTemplate = kafkaTemplate;
     }
 
-    public void sendEventToKafka(UserInfoDto eventData) {
-        Message<UserInfoDto> message = MessageBuilder.withPayload(eventData)
+    public void sendEventToKafka(UserInfoEvent eventData) {
+        Message<UserInfoEvent> message = MessageBuilder.withPayload(eventData)
                 .setHeader(KafkaHeaders.TOPIC, topicJsonName).build();
         kafkaTemplate.send(message);
     }
+
+
 }

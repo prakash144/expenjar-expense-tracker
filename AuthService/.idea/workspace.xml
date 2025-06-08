@@ -5,12 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="734c67b6-548c-45cb-ab2e-7bc706aa7a55" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/org/example/eventProducer/UserInfoProducer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/org/example/serializer/UserInfoSerializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/org/example/eventProducer/UserInfoEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserService/src/main/java/com/example/user_service/config/UserServiceConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserService/src/main/java/com/example/user_service/consumer/AuthServiceConsumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserService/src/main/java/com/example/user_service/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserService/src/main/java/com/example/user_service/deserializer/UserInfoDeserializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserService/src/main/java/com/example/user_service/entities/UserInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserService/src/main/java/com/example/user_service/entities/UserInfoDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserService/src/main/java/com/example/user_service/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../UserService/src/main/java/com/example/user_service/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/example/auth/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/example/auth/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/example/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/example/controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/example/controller/TokenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/example/controller/TokenController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/example/eventProducer/UserInfoProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/example/eventProducer/UserInfoProducer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/org/example/model/UserInfoDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/example/model/UserInfoDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/org/example/serializer/UserInfoSerializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/example/serializer/UserInfoSerializer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/org/example/service/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/org/example/service/UserDetailsServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/resources/application.properties" afterDir="false" />
     </list>
@@ -154,7 +164,16 @@
       <updated>1707757899431</updated>
       <workItem from="1748278369803" duration="429000" />
       <workItem from="1748544038469" duration="305000" />
-      <workItem from="1748988379918" duration="1971000" />
+      <workItem from="1748988379918" duration="4457000" />
+      <workItem from="1749141664926" duration="11000" />
+      <workItem from="1749142011278" duration="10000" />
+      <workItem from="1749156897664" duration="1000" />
+      <workItem from="1749240301878" duration="4303000" />
+      <workItem from="1749328488404" duration="598000" />
+      <workItem from="1749330514114" duration="1121000" />
+      <workItem from="1749361150283" duration="34000" />
+      <workItem from="1749402847805" duration="22000" />
+      <workItem from="1749418522613" duration="5868000" />
     </task>
     <servers />
   </component>
