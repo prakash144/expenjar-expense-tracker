@@ -1,0 +1,49 @@
+plugins {
+	id 'application'
+	id 'java'
+	id 'org.springframework.boot' version '3.2.2'
+	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+}
+
+group = 'com.prakash'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	sourceCompatibility = JavaVersion.VERSION_21
+	targetCompatibility = JavaVersion.VERSION_21
+
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(21)
+	}
+}
+
+application {
+	mainClass = 'com.prakash.userservice.UserServiceApplication'
+}
+
+repositories {
+	mavenCentral()
+}
+
+ext {
+	lombokVersion = "1.18.30"
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.kafka:spring-kafka'
+	implementation 'com.fasterxml.jackson.core:jackson-databind:2.16.1'
+	implementation 'mysql:mysql-connector-java:8.0.33'
+
+	// Lombok
+	implementation "org.projectlombok:lombok:$lombokVersion"
+	compileOnly "org.projectlombok:lombok:$lombokVersion"
+	annotationProcessor "org.projectlombok:lombok:$lombokVersion"
+	testAnnotationProcessor "org.projectlombok:lombok:$lombokVersion"
+	testImplementation "org.projectlombok:lombok:$lombokVersion"
+
+	// Testing
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
