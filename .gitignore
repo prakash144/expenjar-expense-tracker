@@ -43,5 +43,5 @@ UserService/.idea/
 UserService/.DS_Store
 
 # app-docker
-expensetracker-app-docker/Auth-Service/app.jar
-expensetracker-app-docker/User-Service/userservice-0.0.1-SNAPSHOT.jar
+expensetracker-app-docker/Auth-Service/*.jar
+expensetracker-app-docker/User-Service/*.jar
