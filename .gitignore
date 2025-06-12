@@ -42,6 +42,6 @@ UserService/target/
 UserService/.idea/
 UserService/.DS_Store
 
-# app-docker
+# Ignore all .jar files in the Docker app directories
 expensetracker-app-docker/Auth-Service/*.jar
 expensetracker-app-docker/User-Service/*.jar
