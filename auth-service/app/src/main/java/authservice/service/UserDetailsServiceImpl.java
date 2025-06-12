@@ -92,7 +92,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     private UserInfoEvent userInfoEventToPublish(UserInfoDto userInfoDto, String userId) {
         return UserInfoEvent.builder()
                 .userId(userId)
-                .firstName(userInfoDto.getUsername())
+                .firstName(userInfoDto.getFirstName())
                 .lastName(userInfoDto.getLastName())
                 .email(userInfoDto.getEmail())
                 .phoneNumber(userInfoDto.getPhoneNumber())
