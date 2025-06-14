@@ -42,6 +42,20 @@ UserService/target/
 UserService/.idea/
 UserService/.DS_Store
 
+# === DataScienceService specific ===
+
+# Environment and IDE config
+ds-service/.env
+ds-service/.vscode/
+ds-service/.DS_Store
+ds-service/dsenv/
+
+# Python bytecode caches
+ds-service/**/__pycache__/
+
+# Optional: ignore all `.pyc` files just in case
+ds-service/**/*.pyc
+
 # Ignore all .jar files in the Docker app directories
 expensetracker-app-docker/Auth-Service/*.jar
 expensetracker-app-docker/User-Service/*.jar

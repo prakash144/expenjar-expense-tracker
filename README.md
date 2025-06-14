@@ -75,3 +75,8 @@ Before building, make sure the JAR file is generated and placed inside each serv
     ├── Dockerfile
     └── userservice-0.0.1-SNAPSHOT.jar
 ```
+
+### Get IP Address of Service which required in Kong.yml
+
+docker inspect auth-service | grep IPAddress
+docker inspect user-service | grep IPAddress
