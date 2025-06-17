@@ -18,7 +18,7 @@ class MessageService:
             try:
                 result = self.llmService.runLLM(message)
                 logger.debug(f"LLM result: {result}")
-                return result.dict()
+                return result
             except Exception as e:
                 logger.exception("Failed to process message with LLMService")
                 raise

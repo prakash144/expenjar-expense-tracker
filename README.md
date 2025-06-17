@@ -79,4 +79,5 @@ Before building, make sure the JAR file is generated and placed inside each serv
 ### Get IP Address of Service which required in Kong.yml
 
 docker inspect auth-service | grep IPAddress
+
 docker inspect user-service | grep IPAddress

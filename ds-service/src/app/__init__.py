@@ -1,9 +1,12 @@
-import sys, os
+import sys, os, json
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 from flask import Flask, request, jsonify
 from service.messageService import MessageService
 from utils.loggerUtil import get_logger
+from kafka import KafkaProducer
+from config import KAFKA_TOPIC
+
 # Initialize Flask and logger
 app = Flask(__name__)
 logger = get_logger(__name__)
@@ -13,6 +16,8 @@ app.config.from_pyfile('config.py')
 
 # Initialize service
 messageService = MessageService()
+producer = KafkaProducer(bootstrap_servers=['localhost:9092'],
+                        value_serializer=lambda v: json.dumps(v).encode('utf-8'))
 
 
 @app.route('/v1/ds/message', methods=['POST'])
@@ -28,8 +33,13 @@ def handle_message():
     try:
         logger.debug(f"Processing message: {message}")
         result = messageService.process_message(message)
+        serialized_result = result.dict()
+
+        # Send the serialized result to the Kafka topic
+        producer.send(KAFKA_TOPIC, serialized_result)
+        
         logger.info("Message processed successfully")
-        return jsonify(result)
+        return jsonify(serialized_result)
     except Exception as e:
         logger.exception("Error while processing message")
         return jsonify({'error': str(e)}), 500
