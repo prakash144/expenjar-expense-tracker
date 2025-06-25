@@ -6,6 +6,9 @@ Expenjar suggests a digital repository or container for tracking and managing ex
 
 ## HLD
 
+![image](https://github.com/user-attachments/assets/80c35f45-c185-461e-b8b3-8a2c06bd538e)
+
+
 [View HLD Document](https://www.notion.so/1fca74f9803c80ff9d2ae0cb107ad5ac?v=1fca74f9803c808dbd4c000c1d7e4788)
 
 ---
