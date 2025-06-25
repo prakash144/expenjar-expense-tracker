@@ -7,16 +7,6 @@ Expenjar suggests a digital repository or container for tracking and managing ex
 ## GitHub Repo Name
  > expenjar or expenjar-expense-tracker (if you want more descriptive)
 
-## Website Domain
-> expenjar.com (available as checked)
-> expenjar.app (great for apps, check availability)
-
-## LinkedIn Page Name
-> Expenjar
-> Expenjar - Expense Tracker
-
-## Instagram Handle
-> @expenjar  Or if taken, try @expenjarapp or @expenjar_official
 
 ---
 
